@@ -21,7 +21,7 @@ gulp.task('clean', task_clean);
 
 //资源文件复制
 copy = function () {
-    return gulp.src('public/**/*')
+    return gulp.src('src/public/**/*')
         .pipe(gulp.dest('dist/public'));
 
 }
