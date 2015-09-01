@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'), //js压缩
     ngAnnotate = require('gulp-ng-annotate'), //angular
     imagemin = require('gulp-imagemin'), //图片压缩
+    minifyHtml = require("gulp-minify-html"), //html压缩
     rev = require('gulp-rev'), //- 对文件名加MD5后缀
     revCollector = require('gulp-rev-collector'); //- 路径替换
 
@@ -72,7 +73,9 @@ gulp.task('js', task_js);
 html_rev = function () {
     return gulp.src(['dist/rev/**/*.json', 'src/**/*.html'])
         .pipe(revCollector())
+        .pipe(minifyHtml())
         .pipe(gulp.dest('dist'));
+
 }
 gulp.task('rev', [
     'image',
