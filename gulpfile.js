@@ -9,7 +9,11 @@ var gulp = require('gulp'),
 	minifyHtml = require("gulp-minify-html"), //html压缩
 	rev = require('gulp-rev'), //- 对文件名加MD5后缀
 	less = require('gulp-less'), //- less预编译
-	revCollector = require('gulp-rev-collector'); //- 路径替换
+	revCollector = require('gulp-rev-collector'), //- 路径替换
+	postcss = require('gulp-postcss'), //POstCSS处理器
+	cssnext = require('cssnext'), //使用CSS未来的语法
+	precss = require('precss'), //像Sass的函数
+	autoprefixer = require('autoprefixer'); //处理浏览器私有前缀
 
 
 //清理目标目录
@@ -54,8 +58,14 @@ var task_less = function () {
 gulp.task('less', task_less);
 
 //css压缩
+var processors = [
+  autoprefixer,
+  cssnext,
+  precss
+];
 var task_css = function () {
 	return gulp.src('src/css/**/*.css')
+		.pipe(postcss(processors))
 		.pipe(csso())
 		.pipe(rev())
 		.pipe(gulp.dest('dist/css'))

@@ -1,8 +1,8 @@
 {
-    "name": "zchq88_gulp_web",
-    "title": "zchq88_gulp_web",
-    "version": "0.0.1",
-    "keywords": [
+	"name": "zchq88_gulp_web",
+	"title": "zchq88_gulp_web",
+	"version": "0.0.1",
+	"keywords": [
     "zchq88",
     "gulp",
     "angular",
@@ -10,28 +10,32 @@
     "js",
     "web"
   ],
-    "scripts": {
-        "build": "gulp install && gulp",
-        "preview": "gulp preview"
-    },
-    "author": "zchq88",
-    "devDependencies": {
-        "gulp": "",
-        "gulp-clean": "",
-        "gulp-concat": "",
-        "gulp-csso": "",
-        "gulp-imagemin": "",
-        "gulp-jshint": "",
-        "gulp-ng-annotate": "",
-        "gulp-rename": "",
-        "gulp-rev": "",
-        "gulp-rev-collector": "",
-        "gulp-minify-html": "",
+	"scripts": {
+		"build": "gulp install && gulp",
+		"preview": "gulp preview"
+	},
+	"author": "zchq88",
+	"devDependencies": {
+		"gulp": "",
+		"gulp-clean": "",
+		"gulp-concat": "",
+		"gulp-csso": "",
+		"gulp-imagemin": "",
+		"gulp-jshint": "",
+		"gulp-ng-annotate": "",
+		"gulp-rename": "",
+		"gulp-rev": "",
+		"gulp-rev-collector": "",
+		"gulp-minify-html": "",
 		"gulp-less": "",
-        "gulp-uglify": ""
-    },
-    "license": {
-        "type": "MIT",
-        "url": "https://github.com/zchq88/gulp_web/blob/master/LICENSE"
-    }
+		"gulp-uglify": "",
+		"gulp-postcss": "",
+		"autoprefixer": "",
+		"cssnext": "",
+		"precss": ""
+	},
+	"license": {
+		"type": "MIT",
+		"url": "https://github.com/zchq88/gulp_web/blob/master/LICENSE"
+	}
 }
