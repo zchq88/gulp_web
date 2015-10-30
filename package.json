@@ -26,7 +26,8 @@
         "gulp-rename": "",
         "gulp-rev": "",
         "gulp-rev-collector": "",
-        "gulp-minify-html": "",        
+        "gulp-minify-html": "",
+		"gulp-less": "",
         "gulp-uglify": ""
     },
     "license": {
